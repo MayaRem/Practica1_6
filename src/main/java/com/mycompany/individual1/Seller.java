@@ -22,10 +22,11 @@ public class Seller {
     public void modify (Telephone telephone){
         if (telephone != null){
             String marks = telephone.getMark();
+            marks = marks.replace('O', 'A');
+            marks = marks.replace('o', 'a');
             if (!(marks.startsWith("n"))&&!(marks.startsWith("N"))){
                 marks = marks.toLowerCase();
             }
-            marks = marks.replace('o', 'a');
             telephone.setMark(marks);
         }
     }
